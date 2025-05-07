@@ -4,6 +4,7 @@ import Facility from './Facility/Facility';
 import OurDoctor from './OurDoctor/OurDoctor';
 import LeftSide from './LeftSide/LeftSide';
 import RightSide from './RightSide/RightSide';
+import Appointment from './Appointment/Appointment';
 
 const Home = () => {
     return (
@@ -11,10 +12,11 @@ const Home = () => {
             <Banner></Banner>
             <Facility></Facility>
             <OurDoctor></OurDoctor>
-            <div className='flex gap-10 max-w-7xl px-20'>
+            <div className='flex gap-10 max-w-7xl px-20 mx-auto py-10'>
                 <LeftSide/>
                 <RightSide/>
             </div>
+            <Appointment/>
         </div>
     );
 };

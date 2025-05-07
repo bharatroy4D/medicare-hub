@@ -8,7 +8,7 @@ const doctorsData = [
         name: 'Dr. Ahmed Hossain',
         specialist: 'Cardiologist',
         icon: FaHeartbeat,
-        image: 'https://i.pinimg.com/736x/00/f8/e6/00f8e62a60bba40c1cbc109b2a8c559a.jpg',
+        image: 'https://static.vecteezy.com/system/resources/thumbnails/026/375/249/small/ai-generative-portrait-of-confident-male-doctor-in-white-coat-and-stethoscope-standing-with-arms-crossed-and-looking-at-camera-photo.jpg',
         experience: '10 Years',
         location: 'Dhaka, Bangladesh',
     },
