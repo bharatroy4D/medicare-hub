@@ -9,8 +9,8 @@ const Navbar = () => {
             : 'hover:text-yellow-200 transition duration-200';
 
     return (
-        <div>
-            <div className='flex justify-between items-center bg-blue-700 max-w-7xl px-20 mx-auto py-4'>
+        <div className='bg-blue-700 poppins'>
+            <div className='container flex justify-between items-center  px-5 lg:px-10 mx-auto py-4'>
                 {/* Logo and Title */}
                 <div className='flex gap-2 items-center'>
                     <FaHandHoldingMedical className='text-4xl text-green-500' />
@@ -18,7 +18,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Navigation Links */}
-                <div className='flex gap-6 font-semibold text-white items-center'>
+                <div className='flex gap-6 text-sm font-semibold text-white items-center'>
                     <NavLink to='/' className={navLinkStyle}>Home</NavLink>
                     <NavLink to='/services' className={navLinkStyle}>Services</NavLink>
                     <NavLink to='/about' className={navLinkStyle}>About Us</NavLink>
@@ -29,7 +29,7 @@ const Navbar = () => {
 
                 {/* Appointment Button */}
                 <div>
-                    <button className='bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 transition'>
+                    <button className='bg-green-600 font-semibold text-white px-6 py-2 rounded-md hover:bg-green-700 transition'>
                          Appointment
                     </button>
                 </div>

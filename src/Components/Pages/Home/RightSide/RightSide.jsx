@@ -57,6 +57,7 @@ const doctorsData = [
         experience: '7 Years',
         location: 'Barisal, Bangladesh',
     },
+  
 ];
 
 const RightSide = () => {

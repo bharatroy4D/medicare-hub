@@ -5,17 +5,19 @@ import OurDoctor from './OurDoctor/OurDoctor';
 import LeftSide from './LeftSide/LeftSide';
 import RightSide from './RightSide/RightSide';
 import Appointment from './Appointment/Appointment';
+import Services from '../../Services/Services';
 
 const Home = () => {
     return (
-        <div>
+        <div className='container mx-auto'>
             <Banner></Banner>
-            <Facility></Facility>
             <OurDoctor></OurDoctor>
-            <div className='flex gap-10 max-w-7xl px-20 mx-auto py-10'>
+            <Facility></Facility>
+            <div className='flex gap-10 p-5 lg:px-10 mx-auto py-12'>
                 <LeftSide/>
                 <RightSide/>
             </div>
+            <Services></Services>
             <Appointment/>
         </div>
     );
