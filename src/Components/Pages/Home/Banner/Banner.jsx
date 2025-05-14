@@ -4,7 +4,7 @@ import { IoIosCall } from 'react-icons/io';
 
 const Banner = () => {
     return (
-        <div className="bg-gradient-to-br from-blue-200 py-12 w-full">
+        <div className="bg-gradient-to-br from-blue-200 py-12 w-screen">
             <div className="container mx-auto px-5 lg:px-10 flex flex-col md:flex-row items-center justify-between min-h-[80vh]">
                 {/* Left - Text Content */}
                 <div className="md:w-2/3 space-y-6">

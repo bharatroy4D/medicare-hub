@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaCalendarAlt, FaClock, FaUser, FaEnvelope, FaPhone, FaStethoscope } from 'react-icons/fa';
 
-const AppointmentForm = () => {
+const Appointment = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -127,5 +127,5 @@ const AppointmentForm = () => {
     );
 };
 
-export default AppointmentForm;
+export default Appointment;
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import doctor from '../../../../assets/doctor.avif'
 import { FaUserMd, FaHeartbeat, FaTooth, FaBrain, FaLungs, FaBaby } from 'react-icons/fa';
 
 const doctors = [
@@ -52,6 +53,9 @@ const LeftSide = () => {
                         </span>
                     </div>
                 ))}
+            </div>
+            <div className=''>
+                <img src={doctor} alt="" />
             </div>
         </div>
     );

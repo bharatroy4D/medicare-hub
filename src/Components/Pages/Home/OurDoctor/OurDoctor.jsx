@@ -45,7 +45,7 @@ const doctors = [
 
 const OurDoctor = () => {
     return (
-        <div className="px-5 lg:px-10 py-12">
+        <div className="container px-5 lg:px-10 py-15 mx-auto">
             <h2 className="text-3xl font-bold text-center mb-10">Meet Our Doctors</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
                 {doctors.map((doctor) => (

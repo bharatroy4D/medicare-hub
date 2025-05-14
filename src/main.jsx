@@ -13,7 +13,7 @@ import About from './Components/Pages/About/About.jsx';
 import Contact from './Components/Pages/Contact/Contact.jsx';
 import Services from './Components/Services/Services.jsx';
 import OurDoctor from './Components/OurDoctor/OurDoctor.jsx';
-import Appointment from './Components/Appointment/Appointment.jsx';
+import AppointmentForm from './Components/Pages/Home/Appointment/Appointment.jsx';
 
 const router = createBrowserRouter([
   {
@@ -38,7 +38,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/appointment',
-        element:<Appointment/>
+        element:<AppointmentForm/>
       },
       {
         path:'/contact',
