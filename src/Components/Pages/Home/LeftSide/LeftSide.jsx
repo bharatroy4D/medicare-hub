@@ -37,7 +37,7 @@ const doctors = [
 
 const LeftSide = () => {
     return (
-        <div className="p-4 border rounded-lg border-gray-200 bg-white shadow-sm w-[27%] h-fit">
+        <div className="p-4 border rounded-lg border-gray-200 bg-white shadow-sm w-[25%] h-fit">
             <h1 className="text-xl font-semibold text-gray-800 border-b border-gray-300 pb-2 mb-4">Specialist</h1>
             <div className="space-y-3">
                 {doctors.map((doc) => (
@@ -54,7 +54,7 @@ const LeftSide = () => {
                     </div>
                 ))}
             </div>
-            <div className=''>
+            <div className='py-6'>
                 <img src={doctor} alt="" />
             </div>
         </div>

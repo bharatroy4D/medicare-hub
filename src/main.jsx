@@ -12,8 +12,8 @@ import Home from './Components/Pages/Home/Home.jsx';
 import About from './Components/Pages/About/About.jsx';
 import Contact from './Components/Pages/Contact/Contact.jsx';
 import Services from './Components/Services/Services.jsx';
-import OurDoctor from './Components/OurDoctor/OurDoctor.jsx';
 import AppointmentForm from './Components/Pages/Home/Appointment/Appointment.jsx';
+import OurDoctor from './Components/Pages/Home/OurDoctor/OurDoctor.jsx';
 
 const router = createBrowserRouter([
   {

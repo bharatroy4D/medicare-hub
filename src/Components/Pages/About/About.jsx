@@ -1,41 +1,47 @@
-import React from 'react';
-// import './About.css';
-// import Team from './Team';
-// import Testimonials from './Testimonials';
+import React from "react";
+import doctorImg from '../../../assets/hero_cover.png'
+// import doctorImg from "../assets/doctor.jpg"; // Add a doctor image in the assets folder
 
 const About = () => {
   return (
-    <div className="about-container">
-      <section className="about-introduction">
-        <h1>About Dr. John Doe</h1>
-        <p>
-          Dr. John Doe is a renowned physician with over 15 years of experience in
-          providing high-quality healthcare. He specializes in cardiology and believes
-          in offering personalized care to each patient.
-        </p>
-        <div className="about-img">
-          {/* <img src="/images/doctor.jpg" alt="Dr. John Doe" /> */}
+    <section className="bg-gray-50 py-10 px-4 md:px-20">
+      <div className="container px-5 lg:px-10 mx-auto">
+        <h2 className="text-4xl font-bold text-center mb-8 text-blue-900">About Our Doctor</h2>
+
+        <div className="flex flex-col md:flex-row items-center gap-10">
+          <div className="md:w-1/2">
+            <img
+              src={doctorImg}
+              alt="Doctor"
+              className="w-full h-auto rounded-2xl shadow-lg"
+            />
+          </div>
+
+          <div className="md:w-1/2 space-y-5 text-gray-700">
+            <h3 className="text-2xl font-semibold text-blue-800">Dr. Sarah Williams, MD</h3>
+            <p>
+              Dr. Sarah Williams is a board-certified physician with over 15 years of experience in internal medicine and patient care. Her passion for healing and dedication to her patients has made her one of the most trusted doctors in the city.
+            </p>
+            <p>
+              Our mission is to provide compassionate, personalized, and affordable healthcare. We believe every patient deserves attentive, quality care tailored to their unique needs.
+            </p>
+            <ul className="list-disc pl-5 text-gray-800">
+              <li>Comprehensive Health Checkups</li>
+              <li>Chronic Disease Management</li>
+              <li>Pediatric & Geriatric Care</li>
+              <li>Telehealth & Virtual Consultations</li>
+            </ul>
+          </div>
         </div>
-      </section>
 
-      <section className="specialties">
-        <h2>Specialties</h2>
-        <ul>
-          <li>Cardiology</li>
-          <li>Heart Disease Prevention</li>
-          <li>Stroke Rehabilitation</li>
-        </ul>
-      </section>
-
-      <section className="contact-info">
-        <h2>Contact Information</h2>
-        <p>Email: dr.johndoe@example.com</p>
-        <p>Phone: (123) 456-7890</p>
-      </section>
-
-      <Team />
-      <Testimonials />
-    </div>
+        <div className="mt-12 text-center">
+          <h4 className="text-xl font-semibold mb-2 text-blue-700">“Your Health Is Our Priority.”</h4>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Our clinic is designed to make you feel safe, heard, and cared for. Whether it’s a routine checkup or a specialized consultation — we’re here for you, every step of the way.
+          </p>
+        </div>
+      </div>
+    </section>
   );
 };
 

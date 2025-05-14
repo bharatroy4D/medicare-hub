@@ -57,12 +57,30 @@ const doctorsData = [
         experience: '7 Years',
         location: 'Barisal, Bangladesh',
     },
+        {
+        id: 7,
+        name: 'Dr. Ahmed Hossain',
+        specialist: 'Cardiologist',
+        icon: FaHeartbeat,
+        image: 'https://static.vecteezy.com/system/resources/thumbnails/026/375/249/small/ai-generative-portrait-of-confident-male-doctor-in-white-coat-and-stethoscope-standing-with-arms-crossed-and-looking-at-camera-photo.jpg',
+        experience: '10 Years',
+        location: 'Dhaka, Bangladesh',
+    },
+      {
+        id: 8,
+        name: 'Dr. Rezaul Karim',
+        specialist: 'Pediatrician',
+        icon: FaBaby,
+        image: 'https://t4.ftcdn.net/jpg/02/69/98/99/360_F_269989951_9Gf7PWaRtrpm2EochO3D5WVn22sFZbNZ.jpg',
+        experience: '5 Years',
+        location: 'Khulna, Bangladesh',
+    },
   
 ];
 
 const RightSide = () => {
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
             {doctorsData.map((doctor, index) => {
                 const Icon = doctor.icon;
                 return (
@@ -72,7 +90,7 @@ const RightSide = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1, duration: 0.5 }}
                         whileHover={{ scale: 1.03 }}
-                        className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:ring-2 hover:ring-blue-300"
+                        className="bg-white rounded-xl  overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:ring-2 hover:ring-blue-300"
                     >
                         <img
                             src={doctor.image}

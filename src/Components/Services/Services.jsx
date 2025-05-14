@@ -57,16 +57,18 @@ const services = [
 
 const Services = () => {
     return (
-        <div className="container px-5 lg:px-10 py-12 mx-auto bg-gray-50">
-            <h2 className="text-3xl font-bold text-center mb-10">Our Doctor Services</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                {services.map(service => (
-                    <div key={service.id} className="bg-white shadow-md p-6 rounded-lg text-center hover:shadow-lg transition duration-300">
-                        <div className="mb-4 flex justify-center">{service.icon}</div>
-                        <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                        <p className="text-gray-600 text-sm">{service.desc}</p>
-                    </div>
-                ))}
+        <div className='bg-gray-50'>
+            <div className="container px-5 lg:px-10 py-12 mx-auto ">
+                <h2 className="text-3xl font-bold text-center mb-10">Our Doctor Services</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    {services.map(service => (
+                        <div key={service.id} className="bg-white shadow-md p-6 rounded-lg text-center hover:shadow-lg transition duration-300">
+                            <div className="mb-4 flex justify-center">{service.icon}</div>
+                            <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                            <p className="text-gray-600 text-sm">{service.desc}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );
