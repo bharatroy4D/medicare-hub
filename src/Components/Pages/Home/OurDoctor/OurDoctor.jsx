@@ -48,7 +48,7 @@ const doctors = [
 
 const OurDoctor = () => {
     return (
-        <div className="container relative px-5 lg:px-10 py-20 mx-auto">
+        <div className="container relative px-5 lg:px-10 py-10 mx-auto">
             <h2 className="text-3xl font-bold text-center my-15">Meet Our Doctors</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
                 {doctors.map((doctor) => (
@@ -70,32 +70,32 @@ const OurDoctor = () => {
             <div className='container  mx-auto px-20 absolute -top-25 left-1/2 z-20 transform -translate-x-1/2'>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-6">
                     {/* Card 1 */}
-                    <div className="flex flex-col items-start gap-4 bg-gradient-to-r from-cyan-500 to-blue-500 py-8 px-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 text-white">
+                    <div className="flex  items-center gap-7 bg-gradient-to-r from-cyan-500 to-blue-400 py-6 px-6 rounded shadow-lg hover:shadow-2xl transition duration-300 text-white">
                         <div className="bg-white rounded-full p-3 shadow-md">
-                            <FaUserMd className="text-cyan-600 text-3xl" />
+                            <FaUserMd className="text-cyan-600 text-2xl" />
                         </div>
                         <h3 className="text-xl font-semibold">General Physician</h3>
                     </div>
                     {/* Card 2 */}
-                    <div className="flex flex-col items-start gap-4 bg-gradient-to-r from-pink-500 to-red-500 py-8 px-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 text-white">
+                    <div className="flex  items-center gap-7 bg-gradient-to-r from-pink-300 to-red-300 py-6 px-6 rounded shadow-lg hover:shadow-2xl transition duration-300 text-white">
                         <div className="bg-white rounded-full p-3 shadow-md">
-                            <GiStethoscope className="text-pink-600 text-3xl" />
+                            <GiStethoscope className="text-pink-600 text-2xl" />
                         </div>
                         <h3 className="text-xl font-semibold">Cardiologist</h3>
                     </div>
 
                     {/* Card 3 */}
-                    <div className="flex flex-col items-start gap-4 bg-gradient-to-r from-green-400 to-teal-500 py-8 px-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 text-white">
+                    <div className="flex  items-center gap-7 bg-gradient-to-r from-green-300 to-teal-400 py-6 px-6 rounded shadow-lg hover:shadow-2xl transition duration-300 text-white">
                         <div className="bg-white rounded-full p-3 shadow-md">
-                            <GiTooth className="text-green-600 text-3xl" />
+                            <GiTooth className="text-green-600 text-2xl" />
                         </div>
                         <h3 className="text-xl font-semibold">Dentist</h3>
                     </div>
 
                     {/* Card 4 */}
-                    <div className="flex flex-col items-start gap-4 bg-gradient-to-r from-purple-500 to-indigo-600 py-8 px-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 text-white">
+                    <div className="flex  items-center gap-7 bg-gradient-to-r from-purple-100 to-indigo-300 py-6 px-6 rounded shadow-lg hover:shadow-2xl transition duration-300 text-white">
                         <div className="bg-white rounded-full p-3 shadow-md">
-                            <MdLocalHospital className="text-purple-600 text-3xl" />
+                            <MdLocalHospital className="text-purple-600 text-2xl" />
                         </div>
                         <h3 className="text-xl font-semibold">Surgeon</h3>
                     </div>

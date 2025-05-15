@@ -2,12 +2,12 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/f
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0a1d37] text-white pt-16 pb-10 px-4 md:px-10 lg:px-20">
+    <footer className="bg-[#0a1d37] text-white pt-16 pb-10 ">
       <div className="container px-5 lg:px-10 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         
         {/* Logo & About */}
         <div>
-          <img src="/assets/logo.png" alt="Doctor Logo" className="w-28 mb-4" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1nn7ruXqffDFQBkn6Hg44oCp-n6Jl5rMd9ItLHQeuOxPdY4DzKKWBkAZizX5sR-lXTI0&usqp=CAU" alt="Doctor Logo" className="w-14 h-14 rounded-full mb-4 p-0.5" />
           <p className="text-sm text-gray-300">
             We care about your health. Our experienced doctors and modern facilities are here to serve you 24/7.
           </p>

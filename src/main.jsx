@@ -13,7 +13,7 @@ import About from './Components/Pages/About/About.jsx';
 import Contact from './Components/Pages/Contact/Contact.jsx';
 import Services from './Components/Services/Services.jsx';
 import AppointmentForm from './Components/Pages/Home/Appointment/Appointment.jsx';
-import OurDoctor from './Components/Pages/Home/OurDoctor/OurDoctor.jsx';
+import Doctors from './Components/Pages/Doctors/Doctors.jsx';
 
 const router = createBrowserRouter([
   {
@@ -33,8 +33,8 @@ const router = createBrowserRouter([
         element:<About/>
       },
       {
-        path:'/doctor',
-        element:<OurDoctor/>
+        path:'/doctors',
+        element:<Doctors/>
       },
       {
         path:'/appointment',

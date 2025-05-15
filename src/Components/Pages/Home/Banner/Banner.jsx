@@ -1,43 +1,113 @@
 import React from 'react';
 import hero_cover from '../../../../assets/cover.png';
 import { IoIosCall } from 'react-icons/io';
+import { FaStethoscope, FaHeartbeat, FaPlusCircle } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+
+const floatingIconVariants = {
+    float: {
+        y: [0, -15, 0],
+        transition: {
+            duration: 3,
+            repeat: Infinity,
+            repeatType: "loop",
+            ease: "easeInOut"
+        }
+    }
+};
 
 const Banner = () => {
     return (
-        <div className="bg-gradient-to-br from-blue-200 py-12 w-screen">
-            <div className="container mx-auto px-5 lg:px-10 flex flex-col md:flex-row items-center justify-between min-h-[80vh]">
+        <div className="bg-gradient-to-br from-[#e0f7fa] via-white to-[#f1f8e9] py-14 w-full overflow-hidden">
+            <div className="container mx-auto px-5 lg:px-10 flex flex-col-reverse md:flex-row items-center justify-between min-h-[80vh]">
+
                 {/* Left - Text Content */}
-                <div className="md:w-2/3 space-y-6">
-                    <h1 className="text-4xl md:text-5xl font-bold text-gray-800  leading-tight">
-                        Your Health, Our Priority Every Single Day
+                <motion.div
+                    initial={{ opacity: 0, x: -60 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="md:w-2/3 space-y-6"
+                >
+                    <h1 className="text-4xl md:text-5xl font-bold text-gray-800 leading-snug space-y-2">
+                        <div>
+                            Your Health, <span className="text-green-600">Our Mission</span>
+                        </div>
+                        <div className="text-2xl md:text-3xl text-gray-700 font-semibold">
+                            Caring with Compassion
+                        </div>
+                       
+                       
                     </h1>
 
-                    <p className="text-red-500 text-lg">
-                        Welcome to a trusted healthcare center where compassion meets excellence. Dr. [Name] and the team are committed to delivering personalized, expert care for your health and well-being.
+                    <p className="text-gray-600 text-lg leading-relaxed">
+                        Trusted care, advanced treatment, and a team that truly cares — all in one place.
+                        From routine checkups to specialized treatments, we ensure every patient receives personalized attention with empathy, expertise, and integrity.
                     </p>
 
-                    <div className="flex gap-4">
-                        <button className="bg-green-600 hover:bg-green-700 transition text-white font-semibold px-6 py-3 rounded-md flex items-center gap-2 shadow">
+                    <div className="flex flex-wrap gap-4">
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="bg-green-600 hover:bg-green-700 transition text-white font-semibold px-4 py-3 rounded-md flex items-center gap-2 shadow-md"
+                        >
                             Contact Us <IoIosCall className="text-xl" />
-                        </button>
-                        <button className="bg-white border border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition font-semibold px-6 py-3 rounded-md shadow">
-                            Learn More...
-                        </button>
-                    </div>
-                </div>
+                        </motion.button>
 
-                {/* Right - Image with Background Shadow Design */}
-                <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center relative">
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="bg-blue-600 hover:bg-blue-700 transition text-white font-semibold px-4 py-3 rounded-md shadow-md"
+                        >
+                            Book Appointment
+                        </motion.button>
+                    </div>
+                </motion.div>
+
+                {/* Right - Image Section */}
+                <motion.div
+                    initial={{ opacity: 0, y: 60 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                    className="md:w-1/2 mb-10 md:mb-0 flex justify-center relative"
+                >
                     {/* Decorative Background Shape */}
                     <div className="absolute -top-10 -left-10 w-72 h-72 bg-green-100 rounded-full blur-3xl opacity-50 z-0"></div>
+
+                    {/* Floating Doctor Icons */}
+                    <motion.div
+                        className="absolute top-10 left-[-40px] text-green-400 text-3xl z-20"
+                        variants={floatingIconVariants}
+                        animate="float"
+                        transition={{ delay: 0 }}
+                    >
+                        <FaStethoscope />
+                    </motion.div>
+
+                    <motion.div
+                        className="absolute bottom-16 right-[-35px] text-red-400 text-4xl z-20"
+                        variants={floatingIconVariants}
+                        animate="float"
+                        transition={{ delay: 1 }}
+                    >
+                        <FaHeartbeat />
+                    </motion.div>
+
+                    <motion.div
+                        className="absolute top-20 right-[-40px] text-blue-400 text-3xl z-20"
+                        variants={floatingIconVariants}
+                        animate="float"
+                        transition={{ delay: 2 }}
+                    >
+                        <FaPlusCircle />
+                    </motion.div>
 
                     {/* Doctor Image */}
                     <img
                         src={hero_cover}
-                        alt="Healthcare Banner"
-                        className="relative z-10 max-w-full h-auto drop-shadow-xl"
+                        alt="Doctor at Medicare Clinic"
+                        className="relative z-10 max-w-full h-auto drop-shadow-xl rounded-xl"
                     />
-                </div>
+                </motion.div>
             </div>
         </div>
     );

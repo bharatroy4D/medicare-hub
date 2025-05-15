@@ -4,7 +4,7 @@ import doctorImg from '../../../assets/hero_cover.png'
 
 const About = () => {
   return (
-    <section className="bg-gray-50 py-10 px-4 md:px-20">
+    <section className="relative top-10 bg-gray-50 py-10 px-4 md:px-20">
       <div className="container px-5 lg:px-10 mx-auto">
         <h2 className="text-4xl font-bold text-center mb-8 text-blue-900">About Our Doctor</h2>
 
@@ -13,7 +13,7 @@ const About = () => {
             <img
               src={doctorImg}
               alt="Doctor"
-              className="w-full h-auto rounded-2xl shadow-lg"
+              className="w-full h-auto rounded-xl shadow"
             />
           </div>
 
