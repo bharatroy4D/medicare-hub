@@ -1,40 +1,40 @@
 import React from 'react';
-import { FaHandHoldingMedical } from 'react-icons/fa';
+import { FaStethoscope } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const navLinkStyle = ({ isActive }) =>
         isActive
-            ? 'text-yellow-300 border-b-2 border-yellow-300 pb-1'
-            : 'hover:text-yellow-200 transition duration-200';
+            ? 'text-green-500 border-b-2 border-green-500 pb-1'
+            : 'hover:text-green-400 transition duration-200';
 
     return (
-        <div className='bg-blue-700 poppins'>
-            <div className='container flex justify-between items-center  px-5 lg:px-10 mx-auto py-4'>
-                {/* Logo and Title */}
-                <div className='flex gap-2 items-center'>
-                    <FaHandHoldingMedical className='text-4xl text-green-500' />
-                    <span className='text-3xl font-bold text-white'>Medicare</span>
+        <header className='bg-white shadow-md fixed top-0 left-0 w-full z-50'>
+            <div className='container mx-auto px-4 lg:px-10 py-3 flex justify-between items-center'>
+                {/* Logo */}
+                <div className='flex items-center gap-2'>
+                    <FaStethoscope className='text-3xl text-green-600' />
+                    <span className='text-2xl font-bold text-gray-800'>DoctorCare</span>
                 </div>
 
-                {/* Navigation Links */}
-                <div className='flex gap-6 text-sm font-semibold text-white items-center'>
+                {/* Navigation */}
+                <nav className='hidden md:flex gap-6 text-sm font-medium text-gray-700'>
                     <NavLink to='/' className={navLinkStyle}>Home</NavLink>
                     <NavLink to='/services' className={navLinkStyle}>Services</NavLink>
-                    <NavLink to='/about' className={navLinkStyle}>About Us</NavLink>
-                    <NavLink to='/doctor' className={navLinkStyle}>Our Doctor</NavLink>
+                    <NavLink to='/about' className={navLinkStyle}>About</NavLink>
+                    <NavLink to='/doctors' className={navLinkStyle}>Doctors</NavLink>
                     <NavLink to='/appointment' className={navLinkStyle}>Appointment</NavLink>
                     <NavLink to='/contact' className={navLinkStyle}>Contact</NavLink>
-                </div>
+                </nav>
 
-                {/* Appointment Button */}
+                {/* Button */}
                 <div>
-                    <button className='bg-green-600 font-semibold text-white px-6 py-2 rounded-md hover:bg-green-700 transition'>
-                         Appointment
+                    <button className='bg-green-600 hover:bg-green-700 text-white font-semibold px-5 py-2 rounded-md transition'>
+                        Book Now
                     </button>
                 </div>
             </div>
-        </div>
+        </header>
     );
 };
 
