@@ -43,9 +43,9 @@ const doctors = [
 const OurTeam = () => {
     return (
         <div className=" py-16 bg-gray-50">
-            <div className='container  px-5  mx-auto'>
+            <div className='container  px-5 lg:px-10 py-10  mx-auto'>
                 <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">Our Medical Team</h2>
-                    <div className="flex flex-wrap justify-center gap-10 px-4">
+                    <div className="flex flex-wrap justify-between gap-6  px-4 py-5 border border-gray-300 rounded ">
                         {doctors.map((doctor) => (
 
                             <div key={doctor.id} className="w-40 text-center">
