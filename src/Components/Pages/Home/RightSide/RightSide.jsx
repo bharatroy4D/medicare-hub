@@ -84,7 +84,7 @@ const RightSide = ({ selectedSpecialist }) => {
       : doctorsData.filter((doc) => doc.specialist === selectedSpecialist);
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full h-fit">
+<div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 h-fit">
       {filteredDoctors.map((doctor, index) => {
         const Icon = doctor.icon;
         return (

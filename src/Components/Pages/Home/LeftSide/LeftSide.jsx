@@ -15,7 +15,7 @@ const specialists = [
 
 const LeftSide = ({ selectedSpecialist, setSelectedSpecialist }) => {
   return (
-    <div className="p-4 border rounded-lg border-gray-200 bg-white shadow-sm w-[25%] h-fit">
+<div className="p-4 border rounded-lg border-gray-200 bg-white shadow-sm w-full lg:w-[25%] h-fit">
       <h1 className="text-xl font-semibold text-gray-800 border-b border-gray-300 pb-2 mb-4">Specialist</h1>
       <div className="space-y-3">
         {specialists.map((spec) => (

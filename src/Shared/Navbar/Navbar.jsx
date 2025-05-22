@@ -1,8 +1,10 @@
-import React from 'react';
-import { FaStethoscope } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { FaStethoscope, FaBars, FaTimes } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
     const navLinkStyle = ({ isActive }) =>
         isActive
             ? 'text-green-500 border-b-2 border-green-500 pb-1'
@@ -17,8 +19,8 @@ const Navbar = () => {
                     <span className='text-2xl font-bold text-gray-800'>DoctorCare</span>
                 </div>
 
-                {/* Navigation */}
-                <nav className='hidden md:flex gap-6  font-medium text-gray-700'>
+                {/* Desktop Navigation */}
+                <nav className='hidden md:flex gap-6 font-medium text-gray-700'>
                     <NavLink to='/' className={navLinkStyle}>Home</NavLink>
                     <NavLink to='/services' className={navLinkStyle}>Services</NavLink>
                     <NavLink to='/about' className={navLinkStyle}>About</NavLink>
@@ -27,13 +29,40 @@ const Navbar = () => {
                     <NavLink to='/contact' className={navLinkStyle}>Contact</NavLink>
                 </nav>
 
-                {/* Button */}
-                <div>
+                {/* Appointment Button - Desktop */}
+                <div className='hidden md:block'>
                     <button className='bg-green-600 hover:bg-green-700 text-white font-semibold px-5 py-2 rounded-md transition'>
                         Appointment
                     </button>
                 </div>
+
+                {/* Mobile Menu Toggle Button */}
+                <div className='md:hidden'>
+                    <button
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        className='text-2xl text-gray-800 focus:outline-none'
+                    >
+                        {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+                    </button>
+                </div>
             </div>
+
+            {/* Mobile Navigation */}
+            {isMobileMenuOpen && (
+                <div className='md:hidden bg-white px-4 py-4 shadow-lg'>
+                    <nav className='flex flex-col gap-4 font-medium text-gray-700'>
+                        <NavLink to='/' onClick={() => setIsMobileMenuOpen(false)} className={navLinkStyle}>Home</NavLink>
+                        <NavLink to='/services' onClick={() => setIsMobileMenuOpen(false)} className={navLinkStyle}>Services</NavLink>
+                        <NavLink to='/about' onClick={() => setIsMobileMenuOpen(false)} className={navLinkStyle}>About</NavLink>
+                        <NavLink to='/doctors' onClick={() => setIsMobileMenuOpen(false)} className={navLinkStyle}>Doctors</NavLink>
+                        <NavLink to='/appointment' onClick={() => setIsMobileMenuOpen(false)} className={navLinkStyle}>Appointment</NavLink>
+                        <NavLink to='/contact' onClick={() => setIsMobileMenuOpen(false)} className={navLinkStyle}>Contact</NavLink>
+                        <button className='bg-green-600 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded-md transition'>
+                            Appointment
+                        </button>
+                    </nav>
+                </div>
+            )}
         </header>
     );
 };

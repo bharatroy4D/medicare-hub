@@ -67,7 +67,7 @@ const OurDoctor = () => {
                     </div>
                 ))}
             </div>
-            <div className='container  mx-auto px-20 absolute -top-25 left-1/2 z-20 transform -translate-x-1/2'>
+            <div className='container hidden lg:block mx-auto px-20 absolute -top-25 left-1/2 z-20 transform -translate-x-1/2'>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-6">
                     {/* Card 1 */}
                     <div className="flex  items-center gap-7 bg-gradient-to-r from-cyan-500 to-blue-400 py-6 px-6 rounded shadow-lg hover:shadow-2xl transition duration-300 text-white">

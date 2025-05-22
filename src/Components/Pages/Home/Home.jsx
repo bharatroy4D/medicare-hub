@@ -19,13 +19,21 @@ const Home = () => {
             <Banner></Banner>
             <OurDoctor></OurDoctor>
             <Facility></Facility>
-            <div className='container flex gap-8 p-5 lg:px-10 mx-auto py-12'>
+            {/* <div className='container flex gap-8 p-5 lg:px-10 mx-auto py-12'>
+                <LeftSide
+                    selectedSpecialist={selectedSpecialist}
+                    setSelectedSpecialist={setSelectedSpecialist}
+                />
+                <RightSide selectedSpecialist={selectedSpecialist} />
+            </div> */}
+            <div className="container flex flex-col lg:flex-row gap-8 p-5 lg:px-10 mx-auto py-12">
                 <LeftSide
                     selectedSpecialist={selectedSpecialist}
                     setSelectedSpecialist={setSelectedSpecialist}
                 />
                 <RightSide selectedSpecialist={selectedSpecialist} />
             </div>
+            
             <OurTeam></OurTeam>
             <Services></Services>
             <DoctorBlogs></DoctorBlogs>

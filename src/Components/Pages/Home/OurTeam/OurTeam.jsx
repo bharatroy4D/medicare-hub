@@ -1,5 +1,4 @@
 import React from 'react';
-import Marquee from "react-fast-marquee";
 
 const doctors = [
     {
@@ -42,28 +41,27 @@ const doctors = [
 
 const OurTeam = () => {
     return (
-        <div className=" py-16 bg-gray-50">
-            <div className='container  px-5 lg:px-10 py-10  mx-auto'>
+        <section className="py-16 bg-gray-50">
+            <div className="container mx-auto px-5 lg:px-10">
                 <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">Our Medical Team</h2>
-                    <div className="flex flex-wrap justify-between gap-6  px-4 py-5 border border-gray-300 rounded ">
-                        {doctors.map((doctor) => (
-
-                            <div key={doctor.id} className="w-40 text-center">
-                                <img
-                                    src={doctor.image}
-                                    alt={doctor.name}
-                                    className="w-40 h-40 rounded-full transform hover:scale-110 duration-1000 object-cover border-4 border-white shadow-lg mx-auto"
-                                />
-                                <div className="mt-4">
-                                    <p className="text-sm font-semibold text-gray-800">{doctor.name}</p>
-                                    <p className="text-xs text-gray-500">{doctor.specialty}</p>
-                                </div>
+                
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                    {doctors.map((doctor) => (
+                        <div key={doctor.id} className="text-center">
+                            <img
+                                src={doctor.image}
+                                alt={doctor.name}
+                                className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-4 border-white shadow-lg mx-auto transform hover:scale-110 duration-700"
+                            />
+                            <div className="mt-3">
+                                <p className="text-sm sm:text-base font-semibold text-gray-800">{doctor.name}</p>
+                                <p className="text-xs sm:text-sm text-gray-500">{doctor.specialty}</p>
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    ))}
+                </div>
             </div>
-
-        </div>
+        </section>
     );
 };
 
