@@ -1,92 +1,34 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaUserMd, FaHeartbeat, FaTooth, FaBrain, FaLungs, FaBaby } from 'react-icons/fa';
+import useFetch from '../../../../CustomHooks/useFetch';
 
-const doctorsData = [
-  {
-    id: 1,
-    name: 'Dr. Ahmed Hossain',
-    specialist: 'Cardiologist',
-    icon: FaHeartbeat,
-    image: 'https://static.vecteezy.com/system/resources/thumbnails/026/375/249/small/ai-generative-portrait-of-confident-male-doctor-in-white-coat-and-stethoscope-standing-with-arms-crossed-and-looking-at-camera-photo.jpg',
-    experience: '10 Years',
-    location: 'Dhaka, Bangladesh',
-  },
-  {
-    id: 2,
-    name: 'Dr. Nazma Islam',
-    specialist: 'Dentist',
-    icon: FaTooth,
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfysXeccvHJHKrKuc1bamF-8olZmkqjQIRug&s',
-    experience: '6 Years',
-    location: 'Chattogram, Bangladesh',
-  },
-  {
-    id: 3,
-    name: 'Dr. Moinul Haque',
-    specialist: 'Neurologist',
-    icon: FaBrain,
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1nn7ruXqffDFQBkn6Hg44oCp-n6Jl5rMd9ItLHQeuOxPdY4DzKKWBkAZizX5sR-lXTI0&usqp=CAU',
-    experience: '12 Years',
-    location: 'Sylhet, Bangladesh',
-  },
-  {
-    id: 4,
-    name: 'Dr. Fatema Akter',
-    specialist: 'Pulmonologist',
-    icon: FaLungs,
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNtLM5I8UdP82KNEis3AQiVfIbgjM7YKYpo0mOJlWBaSAt2CuCr-79bQvaLl3_Etd7VH8&usqp=CAU',
-    experience: '8 Years',
-    location: 'Rajshahi, Bangladesh',
-  },
-  {
-    id: 5,
-    name: 'Dr. Rezaul Karim',
-    specialist: 'Pediatrician',
-    icon: FaBaby,
-    image: 'https://t4.ftcdn.net/jpg/02/69/98/99/360_F_269989951_9Gf7PWaRtrpm2EochO3D5WVn22sFZbNZ.jpg',
-    experience: '5 Years',
-    location: 'Khulna, Bangladesh',
-  },
-  {
-    id: 6,
-    name: 'Dr. Shirin Sultana',
-    specialist: 'General Physician',
-    icon: FaUserMd,
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5ZFYmynDCDXKnRnoTJ6kL8-iZ620wEWHaEzkZx6RlnVZ3qxUGytfQjFAcjc6EO5eV05Q&usqp=CAU',
-    experience: '7 Years',
-    location: 'Barisal, Bangladesh',
-  },
-  {
-    id: 7,
-    name: 'Dr. Ahmed Hossain',
-    specialist: 'Cardiologist',
-    icon: FaHeartbeat,
-    image: 'https://static.vecteezy.com/system/resources/thumbnails/026/375/249/small/ai-generative-portrait-of-confident-male-doctor-in-white-coat-and-stethoscope-standing-with-arms-crossed-and-looking-at-camera-photo.jpg',
-    experience: '10 Years',
-    location: 'Dhaka, Bangladesh',
-  },
-  {
-    id: 8,
-    name: 'Dr. Rezaul Karim',
-    specialist: 'Pediatrician',
-    icon: FaBaby,
-    image: 'https://t4.ftcdn.net/jpg/02/69/98/99/360_F_269989951_9Gf7PWaRtrpm2EochO3D5WVn22sFZbNZ.jpg',
-    experience: '5 Years',
-    location: 'Khulna, Bangladesh',
-  },
-];
+const iconMap = {
+  'General Physician': FaUserMd,
+  'Cardiologist': FaHeartbeat,
+  'Dentist': FaTooth,
+  'Neurologist': FaBrain,
+  'Pulmonologist': FaLungs,
+  'Pediatrician': FaBaby,
+};
 
 const RightSide = ({ selectedSpecialist }) => {
+  const { data, loading, error } = useFetch({ url: 'doctor.json' });
+
+  if (loading) return <p className="text-center text-blue-500">Loading doctors...</p>;
+  if (error) return <p className="text-center text-red-500">Failed to load doctors.</p>;
+
+  // Filter and slice the data
   const filteredDoctors =
     selectedSpecialist === 'All'
-      ? doctorsData
-      : doctorsData.filter((doc) => doc.specialist === selectedSpecialist);
+      ? data?.slice(0, 8)
+      : data?.filter((doc) => doc.specialist === selectedSpecialist).slice(0, 8);
 
   return (
-<div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 h-fit">
+    <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 h-fit">
       {filteredDoctors.map((doctor, index) => {
-        const Icon = doctor.icon;
+        const Icon = iconMap[doctor.specialist] || FaUserMd;
+
         return (
           <motion.div
             key={doctor.id}
@@ -97,7 +39,7 @@ const RightSide = ({ selectedSpecialist }) => {
             className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:ring-2 hover:ring-blue-300"
           >
             <img
-              src={doctor.image}
+              src={doctor.image || doctor.img}
               alt={doctor.name}
               className="w-full h-48 object-cover"
             />
@@ -105,8 +47,8 @@ const RightSide = ({ selectedSpecialist }) => {
               <Icon className="text-2xl text-blue-500 mx-auto mb-2" />
               <h3 className="text-lg font-bold text-gray-800">{doctor.name}</h3>
               <p className="text-sm text-blue-600 font-medium">{doctor.specialist}</p>
-              <p className="text-sm text-gray-600">{doctor.experience}</p>
-              <p className="text-sm text-gray-500">{doctor.location}</p>
+              <p className="text-sm text-gray-600">🩺 {doctor.experience}</p>
+              <p className="text-sm text-gray-500">📍 {doctor.location}</p>
             </div>
           </motion.div>
         );

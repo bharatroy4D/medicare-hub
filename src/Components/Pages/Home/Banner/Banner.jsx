@@ -49,7 +49,7 @@ const Banner = () => {
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className=" hover:bg-blue-300 border font-semibold px-4 py-3 rounded-md flex items-center gap-2 shadow-md"
+                            className=" hover:bg-blue-100 border font-semibold px-4 py-3 rounded-md flex items-center gap-2 shadow-md"
                         >
                             Contact Us <IoIosCall className="text-xl" />
                         </motion.button>

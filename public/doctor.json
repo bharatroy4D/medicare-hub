@@ -1,0 +1,104 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Sarah Khan",
+    "specialist": "Cardiologist",
+    "specialty": "Cardiologist",
+    "experience": "12 years",
+    "location": "Dhaka Medical Center",
+    "rating": 4.8,
+    "available": true,
+    "img": "https://static.vecteezy.com/system/resources/thumbnails/026/375/249/small_2x/ai-generative-portrait-of-confident-male-doctor-in-white-coat-and-stethoscope-standing-with-arms-crossed-and-looking-at-camera-photo.jpg",
+    "icon": "FaHeartbeat"
+  },
+  {
+    "id": 2,
+    "name": "Dr. Ayan Rahman",
+    "specialist": "Orthopedic Surgeon",
+    "specialty": "Orthopedic Surgeon",
+    "experience": "9 years",
+    "location": "Apollo Hospital",
+    "rating": 4.6,
+    "available": true,
+    "img": "https://st4.depositphotos.com/1017986/21088/i/450/depositphotos_210888716-stock-photo-happy-doctor-with-clipboard-at.jpg",
+    "icon": "FaUserMd"
+  },
+  {
+    "id": 3,
+    "name": "Dr. Nusrat Jahan",
+    "specialist": "Pediatrician",
+    "specialty": "Pediatrician",
+    "experience": "7 years",
+    "location": "Green Life Hospital",
+    "rating": 4.9,
+    "available": false,
+    "img": "https://media.istockphoto.com/id/1473337705/photo/cheerful-female-doctor-in-white-uniform-holding-clipboard-stock-photo.jpg?s=612x612&w=0&k=20&c=VV0Jw6ipf7sNaTMdwlFtlAGqgU1OFBWe1IaxCsaGtBo=",
+    "icon": "FaBaby"
+  },
+  {
+    "id": 4,
+    "name": "Dr. Mahfuz Hasan",
+    "specialist": "Dermatologist",
+    "specialty": "Dermatologist",
+    "experience": "10 years",
+    "location": "Square Hospital",
+    "rating": 4.7,
+    "available": true,
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5ZFYmynDCDXKnRnoTJ6kL8-iZ620wEWHaEzkZx6RlnVZ3qxUGytfQjFAcjc6EO5eV05Q&usqp=CAU",
+    "icon": "FaUserMd"
+  },
+  {
+    "id": 5,
+    "name": "Dr. Ahmed Hossain",
+    "specialist": "Cardiologist",
+    "experience": "10 Years",
+    "location": "Dhaka, Bangladesh",
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/026/375/249/small/ai-generative-portrait-of-confident-male-doctor-in-white-coat-and-stethoscope-standing-with-arms-crossed-and-looking-at-camera-photo.jpg",
+    "icon": "FaHeartbeat"
+  },
+  {
+    "id": 6,
+    "name": "Dr. Nazma Islam",
+    "specialist": "Dentist",
+    "experience": "6 Years",
+    "location": "Chattogram, Bangladesh",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfysXeccvHJHKrKuc1bamF-8olZmkqjQIRug&s",
+    "icon": "FaTooth"
+  },
+  {
+    "id": 7,
+    "name": "Dr. Moinul Haque",
+    "specialist": "Neurologist",
+    "experience": "12 Years",
+    "location": "Sylhet, Bangladesh",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1nn7ruXqffDFQBkn6Hg44oCp-n6Jl5rMd9ItLHQeuOxPdY4DzKKWBkAZizX5sR-lXTI0&usqp=CAU",
+    "icon": "FaBrain"
+  },
+  {
+    "id": 8,
+    "name": "Dr. Fatema Akter",
+    "specialist": "Pulmonologist",
+    "experience": "8 Years",
+    "location": "Rajshahi, Bangladesh",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNtLM5I8UdP82KNEis3AQiVfIbgjM7YKYpo0mOJlWBaSAt2CuCr-79bQvaLl3_Etd7VH8&usqp=CAU",
+    "icon": "FaLungs"
+  },
+  {
+    "id": 9,
+    "name": "Dr. Rezaul Karim",
+    "specialist": "Pediatrician",
+    "experience": "5 Years",
+    "location": "Khulna, Bangladesh",
+    "image": "https://t4.ftcdn.net/jpg/02/69/98/99/360_F_269989951_9Gf7PWaRtrpm2EochO3D5WVn22sFZbNZ.jpg",
+    "icon": "FaBaby"
+  },
+  {
+    "id": 10,
+    "name": "Dr. Shirin Sultana",
+    "specialist": "General Physician",
+    "experience": "7 Years",
+    "location": "Barisal, Bangladesh",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5ZFYmynDCDXKnRnoTJ6kL8-iZ620wEWHaEzkZx6RlnVZ3qxUGytfQjFAcjc6EO5eV05Q&usqp=CAU",
+    "icon": "FaUserMd"
+  }
+]
