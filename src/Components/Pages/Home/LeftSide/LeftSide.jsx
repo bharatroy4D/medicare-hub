@@ -25,7 +25,7 @@ const LeftSide = ({ selectedSpecialist, setSelectedSpecialist }) => {
 
       {/* 🌐 Mobile View: Horizontal Scroll */}
       <div className="lg:hidden w-full overflow-x-auto scrollbar-hide">
-        <div className="flex gap-3 px-2 py-2 lg:py-4">
+        <div className="flex gap-3 px-2 py-1">
           {specialists.map((spec) => (
             <div
               key={spec.id}
