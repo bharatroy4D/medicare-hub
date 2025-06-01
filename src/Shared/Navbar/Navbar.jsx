@@ -20,7 +20,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Desktop Navigation */}
-                <nav className='hidden md:flex gap-6 font-medium text-gray-700'>
+                <nav className='hidden md:flex gap-8 font-medium text-gray-700'>
                     <NavLink to='/' className={navLinkStyle}>Home</NavLink>
                     <NavLink to='/services' className={navLinkStyle}>Services</NavLink>
                     <NavLink to='/about' className={navLinkStyle}>About</NavLink>
@@ -31,8 +31,8 @@ const Navbar = () => {
 
                 {/* Appointment Button - Desktop */}
                 <div className='hidden md:block'>
-                    <button className='bg-green-600 hover:bg-green-700 text-white font-semibold px-5 py-2 rounded-md transition'>
-                        Appointment
+                    <button className='bg-blue-600 hover:bg-blue-900 text-white font-semibold px-5 py-2 rounded-md transition'>
+                        Login
                     </button>
                 </div>
 

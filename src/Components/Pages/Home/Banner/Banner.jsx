@@ -3,6 +3,9 @@ import hero_cover from '../../../../assets/cover.png';
 import { IoIosCall } from 'react-icons/io';
 import { FaStethoscope, FaHeartbeat, FaPlusCircle } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { MdEventAvailable } from "react-icons/md";
+
+
 
 const floatingIconVariants = {
     float: {
@@ -42,21 +45,22 @@ const Banner = () => {
                         From routine checkups to specialized treatments, we ensure every patient receives personalized attention with empathy, expertise, and integrity.
                     </p>
 
-                    <div className="flex flex-wrap justify-center md:justify-start gap-4">
+                    <div className="flex flex-wrap justify-center md:justify-start gap-4">                
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="bg-green-600 hover:bg-green-700 text-white font-semibold px-4 py-3 rounded-md flex items-center gap-2 shadow-md"
+                            className=" hover:bg-blue-300 border font-semibold px-4 py-3 rounded-md flex items-center gap-2 shadow-md"
                         >
                             Contact Us <IoIosCall className="text-xl" />
                         </motion.button>
 
-                        <motion.button
+                             <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-3 rounded-md shadow-md"
+                            className="flex gap-5 items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-3 rounded-md shadow-md"
                         >
-                            Book Appointment
+                         Appointment <MdEventAvailable className="text-xl text-white" />
+
                         </motion.button>
                     </div>
                 </motion.div>

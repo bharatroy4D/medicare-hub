@@ -42,7 +42,7 @@ const doctors = [
         location: 'Square Hospital',
         rating: 4.7,
         available: true,
-        img: 'https://img.freepik.com/premium-photo/handsome-happy-doctor-with-crossed-arms-isolated-white_53419-5238.jpg'
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5ZFYmynDCDXKnRnoTJ6kL8-iZ620wEWHaEzkZx6RlnVZ3qxUGytfQjFAcjc6EO5eV05Q&usqp=CAU'
     },
 ];
 
