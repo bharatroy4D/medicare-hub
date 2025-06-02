@@ -1,15 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaUserMd, FaHeartbeat, FaTooth, FaBrain, FaLungs, FaBaby } from 'react-icons/fa';
+import {
+  FaUserMd,
+  FaHeartbeat,
+  FaTooth,
+  FaBrain,
+  FaLungs,
+  FaBaby,
+} from 'react-icons/fa';
 import useFetch from '../../../../CustomHooks/useFetch';
 
 const iconMap = {
   'General Physician': FaUserMd,
-  'Cardiologist': FaHeartbeat,
-  'Dentist': FaTooth,
-  'Neurologist': FaBrain,
-  'Pulmonologist': FaLungs,
-  'Pediatrician': FaBaby,
+  Cardiologist: FaHeartbeat,
+  Dentist: FaTooth,
+  Neurologist: FaBrain,
+  Pulmonologist: FaLungs,
+  Pediatrician: FaBaby,
 };
 
 const RightSide = ({ selectedSpecialist }) => {
@@ -22,10 +29,12 @@ const RightSide = ({ selectedSpecialist }) => {
   const filteredDoctors =
     selectedSpecialist === 'All'
       ? data?.slice(0, 8)
-      : data?.filter((doc) => doc.specialist === selectedSpecialist).slice(0, 8);
+      : data
+          ?.filter((doc) => doc.specialist === selectedSpecialist)
+          .slice(0, 8);
 
   return (
-    <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 h-fit">
+    <div className="w-full grid grid-cols-2 min-[400px]:grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 h-fit">
       {filteredDoctors.map((doctor, index) => {
         const Icon = iconMap[doctor.specialist] || FaUserMd;
 

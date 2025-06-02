@@ -30,7 +30,7 @@ const LeftSide = ({ selectedSpecialist, setSelectedSpecialist }) => {
             <div
               key={spec.id}
               onClick={() => setSelectedSpecialist(spec.name)}
-              className={`flex-shrink-0 flex items-center gap-2 px-4 py-2 rounded-full border transition cursor-pointer ${
+              className={`flex-shrink-0 flex items-center gap-2 px-4 py-1 rounded-full border transition cursor-pointer ${
                 selectedSpecialist === spec.name
                   ? 'bg-blue-100 border-blue-500 text-blue-600'
                   : 'bg-white border-gray-300 text-gray-700 hover:bg-blue-50 hover:border-blue-400'

@@ -7,6 +7,7 @@ import {
 import useFetch from '../../../../CustomHooks/useFetch';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from 'react-router-dom';
 
 // Custom arrow components for react-slick
 const NextArrow = (props) => {
@@ -107,24 +108,26 @@ const OurDoctor = () => {
 
       <Slider {...settings}>
         {data && data.map((doctor) => (
-          <div key={doctor.id} className="px-3">
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-500 hover:-translate-y-3">
-              <img
-                src={doctor.img || doctor.image}
-                alt={doctor.name}
-                className="w-full h-56 object-cover"
-              />
-              <div className="p-5 text-center space-y-1">
-                <h3 className="text-xl font-semibold">{doctor.name}</h3>
-                <p className="text-green-600 font-medium">{doctor.specialist || doctor.specialty}</p>
-                <p className="text-sm text-gray-500">🩺 Experience: {doctor.experience}</p>
-                <p className="text-sm text-yellow-500">⭐ Rating: {doctor.rating || 'N/A'}</p>
-                <p className={`text-sm font-semibold ${doctor.available ? 'text-green-500' : 'text-red-500'}`}>
-                  {doctor.available ? 'Available for Appointment' : 'Currently Unavailable'}
-                </p>
+          <Link key={doctor.id} to={`/doctorDetails/${doctor.id}`}>
+            <div key={doctor.id} className="px-3">
+              <div className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-500 hover:-translate-y-3">
+                <img
+                  src={doctor.img || doctor.image}
+                  alt={doctor.name}
+                  className="w-full h-56 object-cover"
+                />
+                <div className="p-5 text-center space-y-1">
+                  <h3 className="text-xl font-semibold">{doctor.name}</h3>
+                  <p className="text-green-600 font-medium">{doctor.specialist || doctor.specialty}</p>
+                  <p className="text-sm text-gray-500">🩺 Experience: {doctor.experience}</p>
+                  <p className="text-sm text-yellow-500">⭐ Rating: {doctor.rating || 'N/A'}</p>
+                  <p className={`text-sm font-semibold ${doctor.available ? 'text-green-500' : 'text-red-500'}`}>
+                    {doctor.available ? 'Available for Appointment' : 'Currently Unavailable'}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </Slider>
 
