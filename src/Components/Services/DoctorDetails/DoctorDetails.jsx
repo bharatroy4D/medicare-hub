@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import useFetch from '../../../CustomHooks/useFetch';
 import {
   FaStethoscope,
@@ -40,7 +40,7 @@ const DoctorDetails = () => {
   }
 
   return (
-    <div className="max-w-6xl mx-auto mt-10 mb-10 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-6xl mx-auto mt-10 lg:mt-20 mb-10 px-4 sm:px-6 lg:px-8">
       <div className="bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow-xl p-6 sm:p-10">
         {/* Header */}
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10">
@@ -141,9 +141,11 @@ const DoctorDetails = () => {
 
         {/* Book Appointment Button */}
         <div className="mt-10 text-center">
-          <button className="bg-blue-600 text-white px-6 sm:px-8 py-3 rounded-lg text-base sm:text-lg hover:bg-blue-700 transition-all duration-300">
-            Book Appointment
-          </button>
+          <Link to={'/appointment'}>
+            <button className="bg-blue-600 text-white px-6 sm:px-8 py-3 rounded-lg text-base sm:text-lg hover:bg-blue-700 transition-all duration-300">
+              Book Appointment
+            </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -53,7 +53,7 @@
     "specialist": "Cardiologist",
     "experience": "10 Years",
     "location": "Dhaka, Bangladesh",
-    "image": "https://static.vecteezy.com/system/resources/thumbnails/026/375/249/small/ai-generative-portrait-of-confident-male-doctor-in-white-coat-and-stethoscope-standing-with-arms-crossed-and-looking-at-camera-photo.jpg",
+    "img": "https://static.vecteezy.com/system/resources/thumbnails/026/375/249/small/ai-generative-portrait-of-confident-male-doctor-in-white-coat-and-stethoscope-standing-with-arms-crossed-and-looking-at-camera-photo.jpg",
     "icon": "FaHeartbeat"
   },
   {
@@ -62,7 +62,7 @@
     "specialist": "Dentist",
     "experience": "6 Years",
     "location": "Chattogram, Bangladesh",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfysXeccvHJHKrKuc1bamF-8olZmkqjQIRug&s",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfysXeccvHJHKrKuc1bamF-8olZmkqjQIRug&s",
     "icon": "FaTooth"
   },
   {
@@ -71,7 +71,7 @@
     "specialist": "Neurologist",
     "experience": "12 Years",
     "location": "Sylhet, Bangladesh",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1nn7ruXqffDFQBkn6Hg44oCp-n6Jl5rMd9ItLHQeuOxPdY4DzKKWBkAZizX5sR-lXTI0&usqp=CAU",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1nn7ruXqffDFQBkn6Hg44oCp-n6Jl5rMd9ItLHQeuOxPdY4DzKKWBkAZizX5sR-lXTI0&usqp=CAU",
     "icon": "FaBrain"
   },
   {
@@ -80,7 +80,7 @@
     "specialist": "Pulmonologist",
     "experience": "8 Years",
     "location": "Rajshahi, Bangladesh",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNtLM5I8UdP82KNEis3AQiVfIbgjM7YKYpo0mOJlWBaSAt2CuCr-79bQvaLl3_Etd7VH8&usqp=CAU",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNtLM5I8UdP82KNEis3AQiVfIbgjM7YKYpo0mOJlWBaSAt2CuCr-79bQvaLl3_Etd7VH8&usqp=CAU",
     "icon": "FaLungs"
   },
   {
@@ -89,7 +89,7 @@
     "specialist": "Pediatrician",
     "experience": "5 Years",
     "location": "Khulna, Bangladesh",
-    "image": "https://t4.ftcdn.net/jpg/02/69/98/99/360_F_269989951_9Gf7PWaRtrpm2EochO3D5WVn22sFZbNZ.jpg",
+    "img": "https://t4.ftcdn.net/jpg/02/69/98/99/360_F_269989951_9Gf7PWaRtrpm2EochO3D5WVn22sFZbNZ.jpg",
     "icon": "FaBaby"
   },
   {
@@ -98,7 +98,7 @@
     "specialist": "General Physician",
     "experience": "7 Years",
     "location": "Barisal, Bangladesh",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5ZFYmynDCDXKnRnoTJ6kL8-iZ620wEWHaEzkZx6RlnVZ3qxUGytfQjFAcjc6EO5eV05Q&usqp=CAU",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5ZFYmynDCDXKnRnoTJ6kL8-iZ620wEWHaEzkZx6RlnVZ3qxUGytfQjFAcjc6EO5eV05Q&usqp=CAU",
     "icon": "FaUserMd"
   }
 ]
