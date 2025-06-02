@@ -44,15 +44,17 @@ const Facility = () => {
         {facilities.map((facility) => (
           <div
             key={facility.id}
-            className="bg-base-200 shadow-md rounded-lg p-6 text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-xl border-b-2 border-green-500"
+            className="bg-base-200 shadow-md rounded-lg p-4 text-center transform transition duration-300 hover:-translate-y-1 hover:shadow-lg border-b-2 border-green-500"
           >
             <div
-              className={`w-16 h-16 mx-auto flex items-center justify-center rounded-full mb-4 ${facility.bgColor}`}
+              className={`w-12 h-12 mx-auto flex items-center justify-center rounded-full mb-3 ${facility.bgColor}`}
             >
               {facility.icon}
             </div>
-            <h3 className="text-xl font-semibold mb-2">{facility.title}</h3>
-            <p className="text-gray-600 text-sm mb-2">{facility.desc}</p>
+            <h3 className="text-lg font-semibold mb-1 truncate whitespace-nowrap">{facility.title}</h3>
+            <p className="text-gray-600 text-sm mb-1 truncate">
+              {facility.desc.length > 45 ? facility.desc.slice(0, 45) + '...' : facility.desc}
+            </p>
             <p className="text-xs text-gray-500 italic">{facility.availability}</p>
           </div>
         ))}

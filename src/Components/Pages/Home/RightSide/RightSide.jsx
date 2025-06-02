@@ -25,13 +25,10 @@ const RightSide = ({ selectedSpecialist }) => {
   if (loading) return <p className="text-center text-blue-500">Loading doctors...</p>;
   if (error) return <p className="text-center text-red-500">Failed to load doctors.</p>;
 
-  // Filter and slice the data
   const filteredDoctors =
     selectedSpecialist === 'All'
       ? data?.slice(0, 8)
-      : data
-          ?.filter((doc) => doc.specialist === selectedSpecialist)
-          .slice(0, 8);
+      : data?.filter((doc) => doc.specialist === selectedSpecialist).slice(0, 8);
 
   return (
     <div className="w-full grid grid-cols-2 min-[400px]:grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 h-fit">
@@ -50,11 +47,13 @@ const RightSide = ({ selectedSpecialist }) => {
             <img
               src={doctor.image || doctor.img}
               alt={doctor.name}
-              className="w-full h-48 object-cover"
+              className="w-full h-28 sm:h-32 md:h-40 lg:h-48 object-cover"
             />
             <div className="p-4 text-center">
-              <Icon className="text-2xl text-blue-500 mx-auto mb-2" />
-              <h3 className="text-lg font-bold text-gray-800">{doctor.name}</h3>
+              {/* Mobile এ icon লুকাতে hidden sm:block ব্যবহার করেছি */}
+              <Icon className="text-2xl text-blue-500 mx-auto mb-2 hidden sm:block" />
+              {/* Name কে এক লাইনে রাখতে truncate ও whitespace-nowrap দিয়ে */}
+              <h3 className="text-lg font-bold text-gray-800 truncate whitespace-nowrap">{doctor.name}</h3>
               <p className="text-sm text-blue-600 font-medium">{doctor.specialist}</p>
               <p className="text-sm text-gray-600">🩺 {doctor.experience}</p>
               <p className="text-sm text-gray-500">📍 {doctor.location}</p>

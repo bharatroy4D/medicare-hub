@@ -15,6 +15,7 @@ import Services from './Components/Services/Services.jsx';
 import AppointmentForm from './Components/Pages/Home/Appointment/Appointment.jsx';
 import Doctors from './Components/Pages/Doctors/Doctors.jsx';
 import DoctorDetails from './Components/Services/DoctorDetails/DoctorDetails.jsx';
+import Login from './Components/Login/Login.jsx';
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,8 @@ const router = createBrowserRouter([
       {path:'/doctors', element:<Doctors/>},
       {path:'/appointment', element:<AppointmentForm/>},
       {path:'/contact', element:<Contact/>},
-      {path:'/doctorDetails/:id', element:<DoctorDetails/>}
+      {path:'/doctorDetails/:id', element:<DoctorDetails/>},
+      {path:'/login', element:<Login/>},
     ]
   },
 ]);

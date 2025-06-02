@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaStethoscope, FaBars, FaTimes } from 'react-icons/fa';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -29,14 +29,16 @@ const Navbar = () => {
                     <NavLink to='/contact' className={navLinkStyle}>Contact</NavLink>
                 </nav>
 
-                {/* Appointment Button - Desktop */}
+                {/* Desktop Login Button */}
                 <div className='hidden md:block'>
-                    <button className='bg-blue-600 hover:bg-blue-900 text-white font-semibold px-5 py-2 rounded-md transition'>
-                        Login
-                    </button>
+                    <Link to='/login'>
+                        <button className='bg-blue-600 hover:bg-blue-900 text-white font-semibold px-5 py-2 rounded-md transition'>
+                            Login
+                        </button>
+                    </Link>
                 </div>
 
-                {/* Mobile Menu Toggle Button */}
+                {/* Mobile Menu Toggle */}
                 <div className='md:hidden'>
                     <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -47,7 +49,7 @@ const Navbar = () => {
                 </div>
             </div>
 
-            {/* Mobile Navigation */}
+            {/* Mobile Menu */}
             {isMobileMenuOpen && (
                 <div className='md:hidden bg-white px-4 py-4 shadow-lg'>
                     <nav className='flex flex-col gap-4 font-medium text-gray-700'>
@@ -57,9 +59,13 @@ const Navbar = () => {
                         <NavLink to='/doctors' onClick={() => setIsMobileMenuOpen(false)} className={navLinkStyle}>Doctors</NavLink>
                         <NavLink to='/appointment' onClick={() => setIsMobileMenuOpen(false)} className={navLinkStyle}>Appointment</NavLink>
                         <NavLink to='/contact' onClick={() => setIsMobileMenuOpen(false)} className={navLinkStyle}>Contact</NavLink>
-                        <button className='bg-green-600 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded-md transition'>
-                            Appointment
-                        </button>
+
+                        {/* Mobile Login Button with mt-5 */}
+                        <Link to='/login' onClick={() => setIsMobileMenuOpen(false)}>
+                            <button className='w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-md transition mt-5'>
+                                Login
+                            </button>
+                        </Link>
                     </nav>
                 </div>
             )}

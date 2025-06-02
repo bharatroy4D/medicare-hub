@@ -1,7 +1,7 @@
 import React from 'react';
 import {
     FaStethoscope, FaXRay, FaSyringe, FaUserNurse, FaTooth,
-    FaNotesMedical, FaBriefcaseMedical, FaLungs, FaHospitalUser, FaMicroscope
+    FaNotesMedical, FaBriefcaseMedical, FaLungs,
 } from 'react-icons/fa';
 
 const services = [
@@ -55,17 +55,26 @@ const services = [
     },
 ];
 
+// Utility to slice description text
+const sliceText = (text, length = 60) => {
+    if (text.length <= length) return text;
+    return text.slice(0, length) + '...';
+};
+
 const Services = () => {
     return (
         <div className='bg-gray-50 py-10 relative top-10'>
-            <div className="container px-5 lg:px-10 mx-auto ">
+            <div className="container px-5 lg:px-10 mx-auto">
                 <h2 className="text-3xl font-bold text-center mb-10">Our Doctor Services</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                     {services.map(service => (
-                        <div key={service.id} className="bg-white shadow-md p-6 rounded-lg text-center hover:shadow-2xl transition duration-300">
+                        <div
+                            key={service.id}
+                            className="bg-white shadow-md p-6 rounded-lg text-center hover:shadow-2xl transition duration-300"
+                        >
                             <div className="mb-4 flex justify-center">{service.icon}</div>
-                            <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                            <p className="text-gray-600 text-sm">{service.desc}</p>
+                            <h3 className="text-xl font-semibold mb-2 truncate">{service.title}</h3>
+                            <p className="text-gray-600 text-sm">{sliceText(service.desc, 40)}</p>
                         </div>
                     ))}
                 </div>
