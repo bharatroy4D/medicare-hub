@@ -38,7 +38,7 @@ const Facility = () => {
   ];
 
   return (
-    <div className="container px-5 lg:px-10 pb-6 mx-auto">
+    <div className="container px-5 lg:px-10 my-10 mx-auto">
       <h2 className="text-3xl font-bold text-center mb-10">Our Medical Facilities</h2>
       <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {facilities.map((facility) => (

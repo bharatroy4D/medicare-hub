@@ -104,7 +104,7 @@ const OurDoctor = () => {
 
   return (
     <div className="container relative px-5 lg:px-10 py-10 mx-auto">
-      <h2 className="text-3xl font-bold text-center my-15">Meet Our Doctors</h2>
+      <h2 className="text-3xl font-bold text-center my-15">Meet Our Specialist</h2>
 
       <Slider {...settings}>
         {data && data.map((doctor) => (
