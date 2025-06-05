@@ -59,11 +59,11 @@ const blogPosts = [
 
 const DoctorBlogs = () => {
   return (
-    <section className="py-16 bg-gray-50">
-      <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">Doctor Blogs</h2>
-      <div className="container mx-auto grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-5 lg:px-10">
+    <section className=" py-6 lg:py-12 lg:mt-10 bg-gray-50">
+      <h2 className="text-2xl lg:text-3xl font-bold text-center text-gray-800 mb-6 lg:mb-10">Doctor Blogs</h2>
+      <div className="container mx-auto grid gap-5 lg:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-5 lg:px-10">
         {blogPosts.map((post) => (
-          <div key={post.id} className="bg-base-200 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+          <div key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
             <div className="p-6">
               <div className="flex items-center mb-4">
                 <img
@@ -76,7 +76,7 @@ const DoctorBlogs = () => {
                   <p className="text-xs text-gray-500">{post.specialty}</p>
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">{post.title}</h3>
+              <h3 className="text-lg lg:text-xl font-semibold text-gray-800 mb-2">{post.title}</h3>
               <p className="text-sm text-gray-600 mb-4">{post.excerpt}</p>
               <p className="text-xs text-gray-400">{post.date}</p>
             </div>

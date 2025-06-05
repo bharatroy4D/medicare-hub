@@ -22,7 +22,7 @@ const floatingIconVariants = {
 
 const Banner = () => {
     return (
-        <div className="bg-gradient-to-br from-[#e0f7fa] via-white to-[#f1f8e9] py-14 w-full overflow-hidden">
+        <div className="bg-gradient-to-br from-[#e0f7fa] via-white to-[#f1f8e9] py-8 lg:py-14 w-full overflow-hidden">
             <div className="container mx-auto px-5 lg:px-10 flex flex-col-reverse md:flex-row items-center justify-between min-h-[80vh] gap-10">
 
                 {/* Left - Text Content */}
@@ -32,20 +32,18 @@ const Banner = () => {
                     transition={{ duration: 0.8 }}
                     className="w-full md:w-2/3 space-y-6 text-center md:text-left"
                 >
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 leading-snug">
+                    <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-gray-800 leading-snug">
                         <div>
                             Your Health, <span className="text-green-600">Our Mission</span>
                         </div>
-                        <div className="text-xl sm:text-2xl md:text-3xl text-gray-700 font-semibold mt-2">
+                        <div className="text-xl sm:text-2xl md:text-3xl text-gray-700 font-semibold mt-1 lg:mt-2">
                             Caring with Compassion
                         </div>
                     </h1>
-
                     <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
                         Trusted care, advanced treatment, and a team that truly cares — all in one place.
-                        From routine checkups to specialized treatments, we ensure every patient receives personalized attention with empathy, expertise, and integrity.
-                    </p>
-
+                        From routine checkups to <span className='hidden lg:block'> specialized treatments, we ensure every patient receives personalized attention with empathy, expertise, and integrity.</span>
+                    </p>                
                     <div className="flex flex-wrap justify-center md:justify-start gap-4">
                         <motion.button
                             whileHover={{ scale: 1.05 }}
@@ -107,7 +105,7 @@ const Banner = () => {
                     <img
                         src={hero_cover}
                         alt="Doctor at Medicare Clinic"
-                        className="relative z-10 max-w-full h-auto drop-shadow-xl rounded-xl"
+                        className="relative z-10 max-w-full top-5 lg:top-0 h-auto drop-shadow-xl rounded-xl"
                     />
                 </motion.div>
             </div>

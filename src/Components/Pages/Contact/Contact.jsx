@@ -2,14 +2,14 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section className="container relative top-10 bg-white py-12 px-5 md:px-10 mx-auto">
+    <section className="container relative top-10 bg-white py-6 lg:py-12 px-5 md:px-10 mx-auto">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center text-blue-900 mb-10">Contact Us</h2>
+        <h2 className="text-2xl lg:text-4xl font-bold text-center text-blue-900 mb-4 lg:mb-10">Contact Us</h2>
 
         <div className="flex flex-col md:flex-row gap-12">
           {/* Contact Info */}
-          <div className="md:w-1/2 space-y-6 text-gray-700">
-            <h3 className="text-2xl font-semibold text-blue-800">Clinic Information</h3>
+          <div className="md:w-1/2 space-y-3 lg:space-y-6 text-gray-700">
+            <h3 className=" text-xl lg:text-2xl text-center lg:text-start font-semibold text-blue-800">Clinic Information</h3>
             <p>
               Our friendly team is here to help you with appointments, inquiries, and medical support.
             </p>

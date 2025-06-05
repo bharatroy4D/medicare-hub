@@ -41,9 +41,9 @@ const doctors = [
 
 const OurTeam = () => {
     return (
-        <section className="py-16 bg-gray-50">
+        <section className="py-6 lg:mt-10 bg-gray-50">
             <div className="container mx-auto px-5 lg:px-10">
-                <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">Our Medical Team</h2>
+                <h2 className=" text-2xl lg:text-3xl font-bold text-center text-gray-800 mb-6 lg:mb-10">Our Medical Team</h2>
                 
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
                     {doctors.map((doctor) => (

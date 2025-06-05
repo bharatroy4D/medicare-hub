@@ -48,14 +48,14 @@ const RightSide = ({ selectedSpecialist }) => {
               <img
                 src={doctor?.img || doctor.img}
                 alt={doctor.name}
-                className="w-full h-28 sm:h-32 md:h-40 lg:h-48 object-cover"
+                className="w-full  h-24 md:h-40 lg:h-44 object-cover"
               />
-              <div className="p-4 text-center">
+              <div className=" p-2 lg:p-4 text-center">
                 <Icon className="text-2xl text-blue-500 mx-auto mb-2 hidden sm:block" />
-                <h3 className="text-lg font-bold text-gray-800 truncate whitespace-nowrap">{doctor.name}</h3>
+                <h3 className="lg:text-lg font-bold text-gray-800 truncate whitespace-nowrap">{doctor.name}</h3>
                 <p className="text-sm text-blue-600 font-medium">{doctor.specialist}</p>
                 <p className="text-sm text-gray-600">🩺 {doctor.experience}</p>
-                <p className="text-sm text-gray-500">📍 {doctor.location}</p>
+                <p className="text-sm hidden lg:block text-gray-500">📍 {doctor.location}</p>
               </div>
             </motion.div>
            </Link>

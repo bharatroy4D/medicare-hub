@@ -103,8 +103,8 @@ const OurDoctor = () => {
   if (error) return <p className="text-center text-lg text-red-500">Failed to load doctors.</p>;
 
   return (
-    <div className="container relative px-5 lg:px-10 py-10 mx-auto">
-      <h2 className="text-3xl font-bold text-center my-15">Meet Our Specialist</h2>
+    <div className="container relative px-5 lg:px-10  mx-auto">
+      <h2 className="text-2xl lg:text-3xl font-bold text-center my-5 lg:my-12">Meet Our Specialist</h2>
 
       <Slider {...settings}>
         {data && data.map((doctor) => (
@@ -114,12 +114,12 @@ const OurDoctor = () => {
                 <img
                   src={doctor.img || doctor.image}
                   alt={doctor.name}
-                  className="w-full h-56 object-cover"
+                  className="w-full h-44  object-cover"
                 />
                 <div className="p-5 text-center space-y-1">
                   <h3 className="text-xl font-semibold">{doctor.name}</h3>
                   <p className="text-green-600 font-medium">{doctor.specialist || doctor.specialty}</p>
-                  <p className="text-sm text-gray-500">🩺 Experience: {doctor.experience}</p>
+                  <p className="text-sm  text-gray-500">🩺 Experience: {doctor.experience}</p>
                   <p className="text-sm text-yellow-500">⭐ Rating: {doctor.rating || 'N/A'}</p>
                   <p className={`text-sm font-semibold ${doctor.available ? 'text-green-500' : 'text-red-500'}`}>
                     {doctor.available ? 'Available for Appointment' : 'Currently Unavailable'}

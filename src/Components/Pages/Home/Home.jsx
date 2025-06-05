@@ -19,7 +19,7 @@ const Home = () => {
             <Banner></Banner>
             <OurDoctor></OurDoctor>
             <About></About>
-            <div className="container flex flex-col lg:flex-row gap-8 p-5 lg:px-10 mx-auto py-12">
+            <div className="container flex flex-col lg:flex-row gap-8 p-5 lg:px-10 mx-auto py-4 lg:py-12">
                 <LeftSide
                     selectedSpecialist={selectedSpecialist}
                     setSelectedSpecialist={setSelectedSpecialist}

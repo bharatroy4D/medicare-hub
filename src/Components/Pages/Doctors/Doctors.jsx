@@ -65,9 +65,9 @@ const doctors = [
 
 const Doctors = () => {
   return (
-    <section className="py-16 bg-gray-50 relative top-4">
-      <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">Our Doctors</h2>
-      <div className="max-w-6xl mx-auto grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4">
+    <section className=" py-8 lg:py-16 bg-gray-50 relative top-8">
+      <h2 className=" text-2xl lg:text-3xl font-bold text-center text-gray-800 mb-6 lg:mb-10">Our Doctors</h2>
+      <div className="max-w-6xl mx-auto grid gap-5 lg:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4">
         {doctors.map((doctor) => (
           <div key={doctor.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
             <div className="p-6 text-center">
