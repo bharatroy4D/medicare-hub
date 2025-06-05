@@ -50,7 +50,7 @@ const RightSide = ({ selectedSpecialist }) => {
                 alt={doctor.name}
                 className="w-full  h-24 md:h-40 lg:h-44 object-cover"
               />
-              <div className=" p-2 lg:p-4 text-center">
+              <div className=" p-3 lg:p-4 text-center">
                 <Icon className="text-2xl text-blue-500 mx-auto mb-2 hidden sm:block" />
                 <h3 className="lg:text-lg font-bold text-gray-800 truncate whitespace-nowrap">{doctor.name}</h3>
                 <p className="text-sm text-blue-600 font-medium">{doctor.specialist}</p>

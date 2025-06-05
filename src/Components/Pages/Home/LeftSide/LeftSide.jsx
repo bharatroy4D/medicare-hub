@@ -30,7 +30,7 @@ const LeftSide = ({ selectedSpecialist, setSelectedSpecialist }) => {
             <div
               key={spec.id}
               onClick={() => setSelectedSpecialist(spec.name)}
-              className={`flex-shrink-0 flex items-center gap-2 px-2 lg:px-4 lg:py-1 rounded-full border transition cursor-pointer ${
+              className={`flex-shrink-0 flex items-center gap-2 px-2 lg:px-4 py-0.5 lg:py-1 rounded-full border transition cursor-pointer ${
                 selectedSpecialist === spec.name
                   ? 'bg-blue-100 border-blue-500 text-blue-600'
                   : 'bg-white border-gray-300 text-gray-700 hover:bg-blue-50 hover:border-blue-400'
@@ -50,7 +50,7 @@ const LeftSide = ({ selectedSpecialist, setSelectedSpecialist }) => {
           {specialists.map((spec) => (
             <div
               key={spec.id}
-              className={`flex items-center gap- pl-2 py-2 rounded-lg cursor-pointer transition group border-l-4 ${
+              className={`flex items-center gap-3 pl-2 py-2 rounded-lg cursor-pointer transition group border-l-4 ${
                 selectedSpecialist === spec.name
                   ? 'bg-blue-50 border-blue-500'
                   : 'border-transparent hover:bg-blue-50 hover:border-blue-500'
