@@ -63,7 +63,7 @@ const sliceText = (text, length = 60) => {
 
 const Services = () => {
     return (
-        <div className='bg-gray-50 py-5  relative lg:top-10'>
+        <div className='bg-gray-50 py-5  relative lg:top-16'>
             <div className="container px-5 lg:px-10 mx-auto">
                 <h2 className=" text-2xl lg:text-3xl font-bold text-center mb-10">Our Doctor Services</h2>
                 <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
