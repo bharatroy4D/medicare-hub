@@ -103,8 +103,8 @@ const OurDoctor = () => {
   if (error) return <p className="text-center text-lg text-red-500">Failed to load doctors.</p>;
 
   return (
-    <div className="container relative px-5 lg:px-10  mx-auto">
-      <h2 className="text-2xl lg:text-3xl font-bold text-center my-5 lg:my-12">Meet Our Specialist</h2>
+    <div className="container relative px-5 lg:px-10   mx-auto">
+      <h2 className="text-2xl lg:text-3xl font-bold text-center py-5 lg:pt-20 lg:pb-10">Meet Our Specialist</h2>
 
       <Slider {...settings}>
         {data && data.map((doctor) => (
